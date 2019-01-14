@@ -10,10 +10,10 @@ import UIKit
 
 class CategoryResultVC: UIViewController {
     var location: String = ""
-    let options = ["한옥", "드라이브", "커피", "디저트"]
-    var token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmlyc3QiLCJpc3MiOiJEb0lUU09QVCJ9.0wvtXq58-W8xkndwb_3GYiJJEbq8zNEXzm6fnHA6xRM"
-    var conceptId: [Int] = [1,2]
-    var menuId: [Int] = [1]
+    var options:[String] = []
+    var token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoic2VldW5pIiwiaXNzIjoiRG9JVFNPUFQifQ.56TYkh--ZSO7duJvdVLf-BOgFBPCG9fdDRGUGTmtC68"
+    var conceptId: [Int] = []
+    var menuId: [Int] = []
     var locationId = 0
     @IBOutlet weak var optionCollectionView: UICollectionView!
     @IBOutlet weak var cafeTableView: UITableView!
@@ -25,13 +25,32 @@ class CategoryResultVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(options)
+        print(conceptId)
+        print(menuId)
+        setupNaviBar()
         setUpListView()
         initData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    private func setupNaviBar() {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "NanumGothicBold", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.black]
+        self.navigationItem.title = "카페 리스트"
+        let button: UIButton = UIButton()
+        button.setImage(#imageLiteral(resourceName: "commonBackBlack"), for: .normal)
+        button.addTarget(self, action: #selector(backAction(_:)), for: .touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        let barButton = UIBarButtonItem(customView: button)
+        self.navigationItem.leftBarButtonItem = barButton
+    }
+    
+    @objc func backAction(_: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func initData() {
@@ -74,7 +93,7 @@ extension CategoryResultVC: UICollectionViewDelegate, UICollectionViewDataSource
         if section == 0 {
             return 1
         } else {
-            return menuId.count + conceptId.count
+            return options.count
         }
     }
     
@@ -109,6 +128,8 @@ extension CategoryResultVC: UITableViewDelegate, UITableViewDataSource {
             cafeCell.cafeImageView.imageFromUrl(cafe.cafeImgURL, defaultImgPath: "")
             cafeCell.cafeNameLabel.text = cafe.cafeName
             cafeCell.cafeAddressLabel.text = cafe.cafeAddressDetail
+            cafeCell.options.append(cafe.cafeConceptName)
+            cafeCell.options.append(cafe.cafeMainMenuName)
             cell = cafeCell
         }
         return cell
