@@ -75,28 +75,31 @@
                                                                             <constraint firstAttribute="width" secondItem="QTA-Wc-HpP" secondAttribute="height" multiplier="335:208" id="HRD-8e-rh5"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cafe skon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1F-m3-a9z">
-                                                                        <rect key="frame" x="6" y="218" width="61" height="15.666666666666657"/>
-                                                                        <fontDescription key="fontDescription" name="NanumGothicOTFExtraBold" family="NanumGothicOTF" pointSize="14"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마포구 연남" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhC-wm-0BH">
-                                                                        <rect key="frame" x="6" y="236.66666666666666" width="70" height="15.666666666666657"/>
-                                                                        <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="14"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qHj-mU-YfK">
+                                                                        <rect key="frame" x="6" y="218" width="70" height="36.333333333333343"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cafe skon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1F-m3-a9z">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="15.666666666666666"/>
+                                                                                <fontDescription key="fontDescription" name="NanumGothicOTFExtraBold" family="NanumGothicOTF" pointSize="14"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마포구 연남" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhC-wm-0BH">
+                                                                                <rect key="frame" x="0.0" y="20.666666666666657" width="70" height="15.666666666666664"/>
+                                                                                <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="14"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                 </subviews>
                                                             </view>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="IhC-wm-0BH" firstAttribute="leading" secondItem="R1F-m3-a9z" secondAttribute="leading" id="0Tk-Tn-ueY"/>
                                                                 <constraint firstItem="QTA-Wc-HpP" firstAttribute="leading" secondItem="Dak-kq-IzZ" secondAttribute="leading" id="1Yo-Mz-7kw"/>
-                                                                <constraint firstItem="IhC-wm-0BH" firstAttribute="top" secondItem="R1F-m3-a9z" secondAttribute="bottom" constant="3" id="Wdt-54-Eo1"/>
-                                                                <constraint firstItem="R1F-m3-a9z" firstAttribute="top" secondItem="QTA-Wc-HpP" secondAttribute="bottom" constant="10" id="c5g-Yj-KqU"/>
-                                                                <constraint firstItem="R1F-m3-a9z" firstAttribute="leading" secondItem="Dak-kq-IzZ" secondAttribute="leading" constant="6" id="i2V-ht-Q7n"/>
+                                                                <constraint firstItem="qHj-mU-YfK" firstAttribute="top" secondItem="QTA-Wc-HpP" secondAttribute="bottom" constant="10" id="g4v-Qg-QdK"/>
                                                                 <constraint firstItem="QTA-Wc-HpP" firstAttribute="top" secondItem="Dak-kq-IzZ" secondAttribute="top" id="n47-YM-HvT"/>
+                                                                <constraint firstItem="qHj-mU-YfK" firstAttribute="leading" secondItem="Dak-kq-IzZ" secondAttribute="leading" constant="6" id="pX1-3b-fEu"/>
                                                                 <constraint firstAttribute="trailing" secondItem="QTA-Wc-HpP" secondAttribute="trailing" id="qRD-k9-WP2"/>
                                                             </constraints>
                                                             <connections>
@@ -281,8 +284,8 @@
                                                                             <constraint firstAttribute="height" constant="55" id="LFj-rh-X9U"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Anw-vO-FDa">
-                                                                        <rect key="frame" x="130" y="21.333333333333332" width="90.333333333333314" height="32.333333333333343"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Anw-vO-FDa">
+                                                                        <rect key="frame" x="130" y="20.000000000000004" width="87.333333333333314" height="35.333333333333343"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX8-NW-Ixa">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="24.666666666666668" height="15"/>
@@ -290,14 +293,14 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="sf4-65-lSJ">
-                                                                                <rect key="frame" x="0.0" y="19" width="90.333333333333329" height="13.333333333333336"/>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="sf4-65-lSJ">
+                                                                                <rect key="frame" x="0.0" y="21.999999999999996" width="87.333333333333329" height="13.333333333333332"/>
                                                                                 <subviews>
                                                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="icCommunityLocation" translatesAutoresizingMaskIntoConstraints="NO" id="G9w-6c-Xa9">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="12" height="13.333333333333334"/>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울시 강남구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVd-xG-OJw">
-                                                                                        <rect key="frame" x="19" y="0.0" width="71.333333333333329" height="13.333333333333334"/>
+                                                                                        <rect key="frame" x="16" y="0.0" width="71.333333333333329" height="13.333333333333334"/>
                                                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="12"/>
                                                                                         <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -417,7 +420,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xm2-Aa-HZv">
-                                                                        <rect key="frame" x="11" y="105.66666666666666" width="223" height="35.666666666666657"/>
+                                                                        <rect key="frame" x="11" y="104.66666666666666" width="223" height="36.666666666666657"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="크리스마스! 여기면 충분할 거에요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQX-lx-VMv">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="223" height="17.333333333333332"/>
@@ -426,8 +429,8 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김정환 에디터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOw-A1-hbf">
-                                                                                <rect key="frame" x="0.0" y="22.333333333333343" width="71.333333333333329" height="13.333333333333336"/>
-                                                                                <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="12"/>
+                                                                                <rect key="frame" x="0.0" y="22.333333333333343" width="77" height="14.333333333333336"/>
+                                                                                <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="13"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -1463,16 +1466,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mpB-WS-3WJ">
-                                                    <rect key="frame" x="76" y="27" width="59" height="26.333333333333329"/>
+                                                    <rect key="frame" x="76" y="26" width="59" height="28.333333333333329"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정화니" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5Y-J4-rug">
-                                                            <rect key="frame" x="0.0" y="0.0" width="31.333333333333332" height="12.333333333333334"/>
-                                                            <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="11"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="36.666666666666664" height="14.333333333333334"/>
+                                                            <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="3mh-3h-gUb">
-                                                            <rect key="frame" x="0.0" y="15.333333333333336" width="59" height="11"/>
+                                                            <rect key="frame" x="0.0" y="17.333333333333336" width="59" height="11"/>
                                                             <subviews>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="communityStarYellow" translatesAutoresizingMaskIntoConstraints="NO" id="4WD-1u-t0Q">
                                                                     <rect key="frame" x="0.0" y="0.0" width="11" height="11"/>
@@ -1493,24 +1496,24 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="evP-Iy-fUV">
-                                                    <rect key="frame" x="48.999999999999993" y="417" width="84.333333333333314" height="32.666666666666686"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="evP-Iy-fUV">
+                                                    <rect key="frame" x="48.999999999999993" y="417" width="87.333333333333314" height="32.666666666666686"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkn-YA-Fqf">
-                                                            <rect key="frame" x="0.0" y="0.0" width="24.666666666666668" height="15.666666666666666"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="24.666666666666668" height="13.666666666666666"/>
+                                                            <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Sgg-6k-s06">
-                                                            <rect key="frame" x="0.0" y="19.666666666666686" width="84.333333333333329" height="13"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Sgg-6k-s06">
+                                                            <rect key="frame" x="0.0" y="19.666666666666686" width="87.333333333333329" height="13"/>
                                                             <subviews>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="icCommunityLocation" translatesAutoresizingMaskIntoConstraints="NO" id="1i6-Pe-q9n">
                                                                     <rect key="frame" x="0.0" y="0.0" width="12" height="13"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울시 강남구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqG-I0-azF">
-                                                                    <rect key="frame" x="19" y="0.0" width="65.333333333333329" height="13"/>
-                                                                    <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="11"/>
+                                                                    <rect key="frame" x="16" y="0.0" width="71.333333333333329" height="13"/>
+                                                                    <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="12"/>
                                                                     <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -1586,30 +1589,30 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rdi-8x-GLV">
-                                                    <rect key="frame" x="45" y="453.66666666666669" width="99" height="24"/>
+                                                    <rect key="frame" x="45" y="453.66666666666669" width="103" height="24"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="s6K-hJ-WkQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="47" height="24"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="49" height="24"/>
                                                             <subviews>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="commonHeartBlankSmall" translatesAutoresizingMaskIntoConstraints="NO" id="yy7-rQ-06L">
                                                                     <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huE-mh-FXg">
-                                                                    <rect key="frame" x="27" y="0.0" width="20" height="24"/>
-                                                                    <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="11"/>
+                                                                    <rect key="frame" x="27" y="0.0" width="22" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="12"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="MZn-Lm-N19">
-                                                            <rect key="frame" x="52" y="0.0" width="47" height="24"/>
+                                                            <rect key="frame" x="54" y="0.0" width="49" height="24"/>
                                                             <subviews>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="commonCommentSmall" translatesAutoresizingMaskIntoConstraints="NO" id="oPQ-Ul-GTZ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9W-bN-CxY">
-                                                                    <rect key="frame" x="27" y="0.0" width="20" height="24"/>
-                                                                    <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="11"/>
+                                                                    <rect key="frame" x="27" y="0.0" width="22" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="12"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -1617,8 +1620,8 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20시간 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dW4-oD-dym">
-                                                    <rect key="frame" x="311.33333333333331" y="420" width="47.666666666666686" height="12.333333333333314"/>
-                                                    <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="11"/>
+                                                    <rect key="frame" x="307" y="420" width="52" height="13.333333333333314"/>
+                                                    <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="12"/>
                                                     <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1729,6 +1732,11 @@
                             <constraint firstItem="ZNp-9i-tiW" firstAttribute="bottom" secondItem="Bmd-i8-ydi" secondAttribute="bottom" id="uU1-jx-IdG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZNp-9i-tiW"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Bmd-i8-ydi"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="HBe-po-uXl">
                         <barButtonItem key="rightBarButtonItem" image="commonSearch" id="PZb-tY-IeP">
