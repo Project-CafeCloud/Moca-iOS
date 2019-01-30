@@ -7,7 +7,7 @@
 //
 
 import Alamofire
-import Alamofire
+import SwiftyJSON
 
 protocol RequestService {
     associatedtype NetworkData: Codable
@@ -21,22 +21,30 @@ extension RequestService {
             
             guard let statusCode = res.response?.statusCode else {
                 print("status")
-                completion(.error(0000))
+                completion(.error(0))
                 return
             }
             guard let status: HTTPStatusCode = HTTPStatusCode(rawValue: statusCode) else { return }
             switch status {
             case .OK:
-                print("200")
                 if let value = res.result.value {
-                    
-                    let decoder = JSONDecoder()
-                    do {
-                        let data = try decoder.decode(NetworkData.self, from: value)
-                        completion(.success(data))
-                    } catch {
-                        print("decoding err")
-                        completion(.error(423))
+                    let json = JSON(value)
+                    if json["status"] == 200 {
+                        let decoder = JSONDecoder()
+                        do {
+                            print("200")
+                            let data = try decoder.decode(NetworkData.self, from: value)
+                            completion(.success(data))
+                        } catch {
+                            print("decoding err")
+                            completion(.error(423))
+                        }
+                    } else if json["status"] == 204 || json["status"] == 404 {
+                        print("204")
+                        completion(.successWithNil(204))
+                    } else if json["status"] == 400 {
+                        print("400")
+                        completion(.error(400))
                     }
                 }
             case .Accepted:
@@ -76,14 +84,24 @@ extension RequestService {
             print(statusCode)
             switch status {
             case .OK:
-                print("200")
                 if let value = res.result.value {
-                    let decoder = JSONDecoder()
-                    do {
-                        let data = try decoder.decode(NetworkData.self, from: value)
-                        completion(.success(data))
-                    } catch {
-                        completion(.error(423))
+                    let statusNum = JSON(value)["status"]
+                    if statusNum == 200 {
+                        let decoder = JSONDecoder()
+                        do {
+                            print("200")
+                            let data = try decoder.decode(NetworkData.self, from: value)
+                            completion(.success(data))
+                        } catch {
+                            print("decoding err")
+                            completion(.error(423))
+                        }
+                    } else if statusNum == 204 || statusNum == 404 {
+                        print("204")
+                        completion(.successWithNil(204))
+                    } else if statusNum == 400 {
+                        print("400")
+                        completion(.error(400))
                     }
                 }
             case .Accepted:
@@ -121,14 +139,24 @@ extension RequestService {
             print(statusCode)
             switch status {
             case .OK:
-                print("200")
                 if let value = res.result.value {
-                    let decoder = JSONDecoder()
-                    do {
-                        let data = try decoder.decode(NetworkData.self, from: value)
-                        completion(.success(data))
-                    } catch {
-                        completion(.error(423))
+                    let json = JSON(value)
+                    if json["status"] == 200 {
+                        let decoder = JSONDecoder()
+                        do {
+                            print("200")
+                            let data = try decoder.decode(NetworkData.self, from: value)
+                            completion(.success(data))
+                        } catch {
+                            print("decoding err")
+                            completion(.error(423))
+                        }
+                    } else if json["status"] == 204 || json["status"] == 404 {
+                        print("204")
+                        completion(.successWithNil(204))
+                    } else if json["status"] == 400 {
+                        print("400")
+                        completion(.error(400))
                     }
                 }
             case .Accepted:
@@ -166,14 +194,24 @@ extension RequestService {
             print(statusCode)
             switch status {
             case .OK:
-                print("200")
                 if let value = res.result.value {
-                    let decoder = JSONDecoder()
-                    do {
-                        let data = try decoder.decode(NetworkData.self, from: value)
-                        completion(.success(data))
-                    } catch {
-                        completion(.error(423))
+                    let json = JSON(value)
+                    if json["status"] == 200 {
+                        let decoder = JSONDecoder()
+                        do {
+                            print("200")
+                            let data = try decoder.decode(NetworkData.self, from: value)
+                            completion(.success(data))
+                        } catch {
+                            print("decoding err")
+                            completion(.error(423))
+                        }
+                    } else if json["status"] == 204 || json["status"] == 404 {
+                        print("204")
+                        completion(.successWithNil(204))
+                    } else if json["status"] == 400 {
+                        print("400")
+                        completion(.error(400))
                     }
                 }
             case .Accepted:
